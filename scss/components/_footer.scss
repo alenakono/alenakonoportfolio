@@ -1,0 +1,16 @@
+footer {
+    background-color: $color-dark;
+    color: $color-white;
+    padding: 40px 20px;
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__text {
+    @include font(1.8rem, 400, 150%);
+    margin-bottom: 15px;
+}

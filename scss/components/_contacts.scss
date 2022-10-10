@@ -1,0 +1,40 @@
+.contacts {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.contacts-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.contacts__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    svg {
+        margin-right: 10px;
+    }
+
+    &._iconed {
+        width: 50px;
+
+        img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+
+.contacts-layout-columns {
+    display: flex;
+
+    .contacts__item {
+        margin-right: 15px;
+    }
+}

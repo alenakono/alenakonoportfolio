@@ -1,0 +1,43 @@
+@mixin columns ($width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    >* {
+        flex: 0 1 $width;
+
+        @include media-laptop {
+            flex: 1 1 $width;
+        }
+    }
+}
+
+@mixin font($size, $weight, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+}
+
+@mixin media-laptop {
+    @media(max-width: $content-width) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+    @media(max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin media-big-mobile {
+    @media(max-width: $mobile-big-width) {
+        @content;
+    }
+}
+
+@mixin media-mobile {
+    @media(max-width: $mobile-width) {
+        @content;
+    }
+}

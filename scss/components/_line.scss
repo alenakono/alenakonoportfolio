@@ -1,0 +1,24 @@
+.line {
+    background-color: $color-dark;
+    color: rgb(209, 209, 209);
+
+}
+
+.line__stack {
+    animation-name: move;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-1000px);
+    }
+
+    to {
+        transform: translateX(0px);
+    }
+}

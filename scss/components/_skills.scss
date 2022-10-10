@@ -1,0 +1,28 @@
+.skills {
+    padding-top: 100px;
+}
+
+.skills-layout {
+    @include columns($width: 33.33%);
+    text-align: center;
+}
+
+.skills__item {
+    height: 120px;
+    @include font(4rem, 500, 150%);
+    border: 2px solid #332F29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-brand;
+
+    @include media-tablet {
+        font-size: 2rem;
+    }
+}
+
+.skills__item:nth-child(odd) {
+    color: $color-background;
+    background-color: $color-dark;
+
+}

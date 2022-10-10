@@ -1,0 +1,115 @@
+@import "./fonts";
+@import "./null";
+@import "./const";
+@import "./mixins";
+@import "./placeholder";
+@import "./global";
+
+@import "./components/header";
+@import "./components/top";
+@import "./components/line";
+@import "./components/about";
+@import "./components/skills";
+@import "./components/portfolio";
+@import "./components/contacts";
+@import "./components/footer";
+@import "./components/popup";
+
+._colored {
+    color: $color-brand;
+}
+
+._uppercase {
+    text-transform: uppercase;
+
+}
+
+._centered {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 13px 33px;
+    @extend %transition;
+    cursor: pointer;
+    @include font(1.6rem, 500, 150%);
+
+    &:hover {
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.24);
+    }
+
+    &._dark {
+        background-color: $color-dark;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-background;
+            color: $color-text;
+        }
+    }
+
+    &._bordered {
+        border: 1px solid #161513;
+
+        &:hover {
+            background-color: $color-dark;
+            color: $color-white;
+        }
+    }
+
+    &._colored {
+        background-color: $color-brand;
+        color: $color-white;
+    }
+
+
+}
+
+
+
+.href_colored {
+    color: $color-brand;
+}
+
+.title {
+    @include font(5.6rem, 400, 114%);
+    font-family: "Livvic", "Verdana", sans-serif;
+
+
+    @include media-laptop {
+        font-size: 3.5rem;
+    }
+
+    @include media-big-mobile {
+        font-size: 3rem;
+    }
+}
+
+.logo {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid $color-brand;
+    border-bottom: 10px solid transparent;
+}
+
+.logo_round {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: $color-brand;
+    border-radius: 50px;
+}
+
+.stack {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    @include font(2.3rem, 500, 130%);
+
+    * {
+        margin-right: 10px;
+    }
+}
